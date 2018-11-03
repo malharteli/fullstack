@@ -1,1 +1,1 @@
-# fullstack
+# fullstack development for javasscript
