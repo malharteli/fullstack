@@ -1,0 +1,10 @@
+/*
+This code will return i every 1.000, 1.1, and 1.2 seconds.
+The error here is the i will equal 3, as the forloop will have completed before running the alert.
+*/
+for (var i =0; i<3; i++){
+  setTimeout(function() {alert(i);}, 1000+i);
+}
+
+/*
+*/
