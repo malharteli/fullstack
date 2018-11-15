@@ -1,0 +1,81 @@
+function PrimeChecker(num) {
+
+
+    //Break up number in to re-arrangeable units (probably using array)
+    var numArray = num.toString().split('').map(Number);
+
+     //Crate sort function to create all possible permutations
+     //switch two given elements via indices
+     //Switch two given given subarrays
+     //for loop to max length to ensure indeices match up
+     //declare new Array to start combinations in
+     var combArray=[];
+    function recombArray(numArray){
+        var carryArray = [];
+        var fn = function(n, src, got, all){
+            if(n===0){
+                if(got.length>0){
+                    all[all.length]=got;
+                }
+                return;
+            }
+        }
+
+        for (i=0;i<numArray.length;i++){
+            fn(i, numArray, [], combArray);
+        }
+        //push new Combination into carryArray
+        carryArray.push(combArray);
+        return carryArray;
+    }
+     //create Array of booleons
+     var boolArray= recombArray(numArray).map(c=>checkPrime(c));
+    //if boolArray includes 'true', return 1, else  return 0
+    if (boolArray.includes(true)){ return 1;} else return 0;
+    //Merge each array's elements together to create a number to test with isPrime
+    function checkPrime(a){
+        return isPrime(Number(a.map(String).join('')));
+        }
+
+
+}
+
+function isPrime(num){
+    var  i=5;
+    if (num <=3){return true}else
+    if (num%2===0){
+        return false;
+    }else
+    if(num%3===0){
+        return false;
+    }else
+    while (i <= Math.sqrt(num)){
+        if (num%i===0 || num%(i+2)===0){
+            return false;
+        }
+        i+=6
+    }
+    return true;
+}
+
+// keep this function call here
+PrimeChecker(readline());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,9 @@
+function BinaryConverter(str) {
+
+  // code goes here
+  return parseInt(str,2);
+
+}
+
+// keep this function call here
+BinaryConverter(readline());                            
