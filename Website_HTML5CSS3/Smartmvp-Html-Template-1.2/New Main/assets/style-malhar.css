@@ -1,0 +1,773 @@
+/*----------------------------------------*/
+/*  Contents  */
+/*----------------------------------------*/
+
+/*1: General Style---------------------GNS*/
+/*2: Typography------------------------TPG*/
+/*3: Buttons & Icons-------------------BNS*/
+/*4: Header & Navigation---------------HNV*/
+/*5: Login/Signup Modal----------------LSM*/
+/*6: Sections Settings-----------------SCS*/
+/*7: Testimonials----------------------TSM*/
+
+
+
+/*----------------------------------------*/
+/*  General Style                    GNS  */
+/*----------------------------------------*/
+
+
+body{
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #727272;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  padding:0;
+  background-color: #ffffff;
+}
+
+.main-wrapper{
+  overflow: hidden;
+}
+
+section{
+  position:relative;
+  overflow: hidden;
+}
+
+/*Internet Explorer*/
+@-webkit-viewport{
+  width:device-width;
+}
+@-moz-viewport{
+  width:device-width;
+}
+@-ms-viewport{
+  width:device-width;
+}
+@-o-viewport{
+  width:device-width;
+}
+@viewport{
+  width:device-width;
+}
+
+/*Links*/
+a{
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+a:hover, a:focus{
+  color: blue;
+  text-decoration:none;
+}
+
+/*Lists*/
+ul{
+  padding-left:0;
+  list-style:none;
+}
+
+/*Backgrounds*/
+.light-bg{
+  background-color:#fafafa;
+}
+.dark-bg{
+  background-color: #323a45;
+}
+.white-bg{
+  background-color: #ffffff;
+}
+
+/*Overlay effect*/
+.overlay{
+  zoom:1;
+  filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorsrt="#80000000", endColorstr="#80000000")
+  background: transparent;
+  background: rgba(51,51,51,0.5);
+}
+:root .overlay{
+  filter:none\0/IE9;
+}
+
+/*Form Settings*/
+.form-group{
+  margin-bottom:25px;
+}
+
+.control-label{
+  display:block;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 7px 0;
+  color: #3e3e3e;
+}
+
+.form-control{
+  display:inline-block;
+  width: 100%;
+  height:39px;
+  padding:9px;
+  font-size: 13px;
+  line-height: 17px;
+  color:#3e3e3e;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #cb6060;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition:none;
+  -webkit-transition:none;
+  -o-transition:none;
+  transition:none;
+}
+
+/*Modal Settings*/
+.modal-content{
+  text-align: center;
+}
+
+/*Notifications*/
+.signup-success,.signup-failed,.lm-success,.lm-failed,.sm-success,.sm-failed,.fast-success,.fast-failed,.subscription-success,.subscription-failed,.mc-success,.mc-failed{
+  display:none;
+  margin-top: 5px;
+}
+
+.lm-success,.sm-success{
+  color: #27ae60;
+}
+
+.signup-success,.signup-failed,.fast-success,.fast-failed,.subscription.success,.subscription-failed,.mc-sucess,.mc-failed{
+  color: white;
+}
+
+.lm-failed,.sm-failed{
+  color:#c0382b;
+}
+
+/*Blockquote*/
+blockquote{
+  border:0;
+  padding:0 20px;
+}
+
+blockquote:before{
+  height:0;
+  float:left;
+  position:relative;
+  top:14px;
+  left:-30px;
+  content: '"';
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-size:50px;
+  color: #999;
+}
+
+blockquote img{
+  float:left;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  height:75px;
+  width:75px;
+  margin-right:15px;
+}
+
+/*Wrappers & Boxes*/
+.wrapper-lg{
+  padding:120px 0;
+}
+
+.wrapper-md{
+  padding:80px 0;
+}
+
+.wrapper-sm{
+  padding:50px 0;
+}
+
+.wrapper-xs{
+  padding:20px 0;
+}
+
+/* Vertcal Align */
+.vmiddle{
+  position:relative;
+  top:50%;
+  -moz-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  transform:translateY(-50%);
+}
+
+/* Preloader */
+.preloader{
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden !important;
+}
+
+.loader-container{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  margin:-20px 0 0 -80px;
+}
+
+.signal{
+  display:inline-block;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  height: 30px;
+  opacity: 0;
+  width: 30px;
+  margin-top: 10px;
+  -webkit-animation: pulsate 1s ease-out;
+  -moz-animation: pulsate 1s ease-out;
+  -webkit-animation-iteration-count:infinite;
+  -moz-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes pulsate {
+  0%{
+    transform:scale(.1);
+    opacity:0.0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform:scale(1.2);
+    opacity:0;
+  }
+}
+
+@-moz-keyframes pulsate {
+  0%{
+    transform:scale(.1);
+    opacity:0.0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    transform:scale(1.2);
+    opacity:0;
+  }
+}
+
+/* New Venobox Close Icon */
+
+.vbox-close{
+  top:5px;
+  right:8px;
+  width:60px;
+  height: 50px;
+  background: url(../images/venobox/close.gif) no-repeat #161617;
+}
+
+/* Text-logo */
+.text-logo{
+  font-family: 'Raleway', 'Open Sans', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 19px;
+  line-height: 21px;
+  color: white;
+}
+
+/*----------------------------------------*/
+/*  Typography                       TPG  */
+/*----------------------------------------*/
+
+h1, h2, h3, h4{
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 20px;
+  color: #3e3e3e;
+  letter-spacing: -1px;
+}
+
+h1{
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 300;
+}
+
+h2{
+  font-size: 42px;
+  line-height: 46px;
+  font-weight: 300;
+  text-align: center;
+}
+
+h3{
+  font-size: 33px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+h4{
+  font-size: 23px;
+  line-height: 32px;
+  font-weight: 400;
+  color: #353535;
+}
+
+h5{
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #3e3e3e;
+}
+
+b, strong {
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+.large{
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.text-white{
+  color: #ffffff;
+}
+
+/*----------------------------------------*/
+/*  Buttons & Icons                  BNS  */
+/*----------------------------------------*/
+.btn{
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -o-transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  margin-right: 15px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 14px 28px 13px 28px;
+  border: 2px solid;
+}
+
+.btn:focus{
+  outline: none;
+}
+
+.btn:hover{
+  text-decoration:none;
+}
+
+.btn>i{
+  font-size: 15px;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+.btn-box{
+  padding: 20px 0;
+}
+
+/* Buttons Color */
+.btn-ghost{
+  background: transparent;
+  color: white;
+  border-color: white;
+}
+
+.btn-ghost:hover{
+  background: white;
+  color: #3e3e3e;
+  border-color: white;
+}
+
+.btn-white{
+  background: white;
+  color: #c0392b;
+  border-color: white;
+}
+
+.btn-white:hover{
+  background: #c0392b;
+  color: #3e3e3e;
+  border-color: #7f8c8d;
+}
+
+.btn-grey{
+  color: #3e3e3e;
+  background-color: transparent;
+  border-color: #7f8c8d;
+}
+
+.btn-grey:hover{
+  color: #3e3e3e;
+  border-color: #3e3e3e;
+  background-color: transparent;
+}
+
+/* Icons Style */
+.icon-lg, .icon-sm{
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  color: #3e3e3e;
+}
+
+.icon-lg{
+  font-size: 65px;
+}
+
+.icon-sm{
+  font-size: 40px;
+}
+
+/*----------------------------------------*/
+/*  Header & Navigation              HNV  */
+/*----------------------------------------*/
+/* Header Background Parallax Settings */
+.header {
+  background: url("../images/hero-placeholder.jpg") no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.header .overlay{
+  height: 800px;
+}
+
+/* Navbar General Settings */
+.navbar{
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar-fixed-top{
+  padding-top:25px;
+  padding-bottom:25px;
+}
+
+.navbar-fixed-top.is-scrolling{
+  background: #323a45, rgba(50, 58, 69, 0.95);
+  border: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar-right{
+  position:relative;
+  top: 5px;
+  float:left;
+  text-align: left;
+}
+
+/* Img-Log Fixes */
+.navbar-brand.img-logo{
+  padding:0;
+}
+
+/* Navbar Links Menu */
+.navbar-nav>li>a{
+  font-family: "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 15px;
+  color: #ffffff;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus, .navbar-nav>.active>a, .navbar-nav>.active>a:hover, .navbar-nav>.active>a:focus{
+  color: white;
+  background-color: transparent;
+}
+
+/* Navbar Mobile Menu */
+.navbar-toggle, .navbar-toggle:hover, .navbar-toggle:focus{
+  background-color: transparent;
+}
+
+.navbar-toggle{
+  color: white;
+  padding: 0;
+  margin-top: 13px;
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+.navbar-collapse{
+  box-shadow:none;
+  border: 0;
+}
+
+/* Navbar Buttons */
+.navbar-nav>li>a.btn-nav{
+  margin: 6px 0 10px 15px;
+  padding: 7px;
+}
+
+.navbar-nav>li>a.btn-nav:hover,.navbar-nav>li>a.btn-nav:focus{
+  background: white;
+  color: #3e3e3e;
+  border-color: white;
+}
+
+/* Hero-Section */
+.hero-section .btn-color:hover{
+  border-color: white;
+}
+
+.hero-section p{
+  font-size: 21px;
+  line-height: 27px;
+  letter-spacing: -1px;
+  margin-bottom: 35px;
+}
+
+.hero-section .btn-box{
+  padding:0;
+}
+
+.hero-section .btn{
+  margin-bottom:0;
+}
+
+/* Header Solid-Background */
+.solid-bg .overlay{
+  background:none;
+}
+
+.solid-bg .btn-white:hover{
+  border-color:white;
+  color: white;
+}
+
+/* Header App */
+.hero-app .hero-section{
+  padding-top: 20%
+}
+
+/* Header Type */
+.type h1{
+  line-height: 59px;
+}
+
+/* Header Video Background */
+.header.video-bg{
+  background: transparent;
+}
+
+.header.youtube-bg .overlay{
+  height: 650px;
+}
+
+/* Header Slider */
+.header.slider{
+  background:none;
+}
+
+.header.slider .overlay{
+  height: 100%;
+}
+
+.slider-text{
+  display:block;
+}
+
+/* Header Dashboard */
+.header.dashboard .overlay{
+  overflow:hidden;
+}
+
+.dashboard .hero-section{
+  padding-top: 25%
+}
+
+.image-dashboard{
+  overflow:hidden;
+  padding-top: 30px;
+}
+
+.image-dashboard img{
+  max-width: 85%;
+}
+
+/*----------------------------------------*/
+/*  Login/Signup Modal               LSM  */
+/*----------------------------------------*/
+.login .modal-dialog{
+  width: 400px;
+  margin-top: 105px;
+}
+
+.login .modal-content{
+  background-color: #fcfcfc;
+  border-radius: 6px;
+}
+
+.login .modal-header{
+  padding: 15px 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.login .modal-header .close{
+  color: #3e3e3e;
+  opacity: 0.7;
+}
+
+.login .modal-header .close:hover{
+  opacity: 1;
+}
+
+.login .modal-header .close i{
+  font-weight:bold;
+}
+
+.login .modal-header .close:focus{
+  outline:none;
+}
+
+.login .modal-header .modal-title{
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.login .modal-header .modal-subtitle{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #3e3e3e;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.login .form-control{
+  margin: 5px auto;
+}
+
+.login .btn{
+  width: 100%;
+  margin: 5px 0 0;
+}
+
+.login .btn-color:hover{
+  color: #fff;
+  background-color: #3e3e3e;
+  border-color: #3e3e3e;
+}
+
+.login .modal-footer{
+  border-top: 0;
+  margin-top: 0;
+  padding: 10px 20px 20px;
+}
+
+.login .forgot{
+  color: #3e3e3e;
+  margin-left: 0;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.modal-body{
+  padding: 20px 50px;
+}
+
+/*----------------------------------------*/
+/*  Sections Settings                SCS  */
+/*----------------------------------------*/
+/* About- Intro Features */
+.intro-features{
+  text-align: center;
+}
+
+.intro-features .icon-lg{
+  margin-bottom: 20px;
+}
+
+/* Image with Action */
+.img-with-action .btn-color:hover{
+  background:transparent;
+}
+
+.img-with-action .btn-box{
+  padding-bottom: 0;
+}
+
+.img-col-bg{
+  position: absolute;
+  height:100%
+  padding: 0;
+  top: 0;
+}
+
+.img-col-bg:before{
+  opacity: 0.2;
+  position: absolute;
+  content: " ";
+  top: 0;
+  right: 0;
+  bottom:0;
+  left: 0;
+  background: #b0babf;
+}
+
+.img-right{
+  right: 0;
+  background: url(../images/img-right.jpg) 50% 0 no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
