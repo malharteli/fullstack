@@ -17,6 +17,44 @@ $(window).load(function(){
 })
 
 /*=============================
+  LOGIN-SIGNUP MODAL
+===============================*/
+
+function showRegisterForm(){
+  $('.loginBox').fadeOut('fast', function(){
+    $('.registerBox').fadeIn('fast');
+    $('.login-footer').fadeOut('fast',function(){
+      $('register-footer').fadeIn('fast');
+    });
+    $('.modal-title').html('Create an Account');
+    $('.modal-subtitle').html('Begin a 30-day free trial of ARGLEBLARGLE');
+  });
+  $('.error').removeClass('alert alert-danger').html('');
+}
+
+function showLoginForm(){
+  $('#loginModal .registerBox').fadeOut('fast', function(){
+    $('.loginBox').fadeIn('fast');
+    $('.register-footer').fadeOut('fast', function(){
+      $('login-footer').fadeIn('fast');
+    });
+    $('.modal-title').html('Sign in to <span>SmartSpam</span>');
+    $('.modal-subtitle').html('Enter your email and password')
+  });
+  $('.error').removeClass('alert alert-danger').html('');
+}
+
+function openLoginModal(){
+  showLoginForm();
+  $('#loginModal').modal('show');
+}
+
+function openRegisterModal(){
+  showRegisterForm();
+  $('#loginModal').modal('show');
+}
+
+/*=============================
   SCROLL NAVBAR
 ===============================*/
 $(window).scroll(function(){
@@ -30,6 +68,14 @@ $(window).scroll(function(){
 });
 
 /*=============================
+  TYPING EFFECT
+===============================*/
+(function($){
+  $('[data-typer-targets]').typer();
+  $.typer.options.clearOnHighlight=false;
+})(jQuery);
+
+/*=============================
   SPY For ACTIVE SECTION
 ===============================*/
 (function($){
@@ -41,7 +87,7 @@ $(window).scroll(function(){
 ===============================*/
 
 (function($){
-
+  "use strict";
   $(".nav.navbar-nav li a").click(function(){
     var $togglebtn = $(".navbar-toggle");
     if(!($togglebtn.hasClass("collapsed"))&&($togglebtn.is(":visible"))){
