@@ -93,6 +93,11 @@
     margin: 7.5px -15px;
   }
 
+  .navbar-nav{
+    float:none!important;
+    margin: 7.5px -15px;
+  }
+
   .navbar-nav>li{
     float:none;
   }

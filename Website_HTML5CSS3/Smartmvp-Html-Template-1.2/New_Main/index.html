@@ -86,7 +86,12 @@
                   <div class="btn-box">
                     <a href="#about" class="btn btn-ghost scrollto">Test ScrollTo</a>
                   </div>
+                </div>
               </div>
+              <div class="col-sm-6 hidden-xs">
+                <div class="app-box">
+                  <img src="assets/images/devices.png" alt="" class="img-responsive">
+                </div>
               </div>
             </div>
           </div>
@@ -161,7 +166,7 @@
             <div class="row">
               <div class="col-md-12">
                 <h2>Get out of the Building</h2>
-                <p class="large">Ideal for SaaS, web stuff, and marketing webapps</p>
+                <p class="large">Ideal for SaaS, web stuff, and marketing webapps<br></p>
               </div>
             </div>
 
@@ -169,7 +174,7 @@
               <div class="col-md-5">
                 <div class="start-line"></div>
                 <h4>CHART</h4>
-                <p></p>
+                <p>This is needed for spacing- it seems that the float<br>in this case is causing the chart to float<br> over everything else.<br>The solution given in the original code uses a hardset bottom-margin that doesn't work without several lines of text</p>
                 <p><a href="#canvas-bg" class="scrollto"><strong>Features Link</strong></a></p>
               </div>
               <div class="col-md-7">
@@ -179,9 +184,9 @@
                   </div>
                   <canvas id="chart-area"width="400" height="400"></canvas>
                 </div>
-                <div class="canvas2-holder">
+                <div id="canvas2-holder">
                   <div class="chart2-text">
-                    <span>A SECOND Chart!</span>
+                    <span>A SECOND<br> Chart!</span>
                   </div>
                   <canvas id="chart2-area" width="300" height="300"></canvas>
                 </div>
@@ -225,6 +230,161 @@
 
 
       <!--Features Section-->
+      <section class="tab-features color-bg" id="features">
+        <div class="container">
+          <div class="features-title">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="text-white">Explore Features</h2>
+                <p class="large text-white">This is the tabs part</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <!--Features Tab-->
+            <div class="tabs features tab-container">
+              <ul class="etabs">
+
+                <li class="tab">
+                  <a href="#tab-feature-1">
+                    <div class="icon-sm">
+                      <i class="icon icon-layers"></i>
+                    </div>
+                    <h5 class="text-white">Flexible Use<br> Interface</h5>
+                  </a>
+                </li>
+
+                <li class="tab">
+                  <a href="#tab-feature-2">
+                    <div class="icon-sm">
+                      <i class="icon icon-pictures"></i>
+                    </div>
+                    <h5 class="text-white">Multiple Layout<br> Options</h5>
+                  </a>
+                </li>
+
+                <li class="tab">
+                  <a href="#tab-feature-3">
+                    <div class="icon-sm">
+                      <i class="icon icon-grid"></i>
+                    </div>
+                    <h5 class="text-white">Built on<br> Bootstrap 3.2</h5>
+                  </a>
+                </li>
+
+                <li class="tab">
+                  <a href="#tab-feature-4">
+                    <div class="icon-sm">
+                      <i class="icon icon-chat"></i>
+                    </div>
+                    <h5 class="text-white">Support Forum<br> Access</h5>
+                  </a>
+                </li>
+
+                <li class="tab">
+                  <a href="#tab-feature-5">
+                    <div class="icon-sm">
+                      <i class="icon icon-lightbulb"></i>
+                    </div>
+                    <h5 class="text-white">Designed for<br> Startups</h5>
+                  </a>
+                </li>
+              </ul><!--/End Etabs-->
+
+              <div class="panel-container">
+                <!--Tab Content 1-->
+                <div class="tab-content" id="tab-feature-1">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-5 col-sm-6">
+                        <h4>This page has some versatile features</h4>
+                        <p>Marketing buzzwords composed of dandelions and bumblebee fuzz.</p>
+                        <div class="btn-box">
+                          <a href="#testimonials" class="btn btn-grey scrollto">Our Clients</a>
+                          <a href="#team" class="btn btn-grey scrollto">Meet the Tem</a>
+                        </div>
+                      </div>
+                      <div class="col-md-7 col-sm-6 hidden-xs wow fadeInRight" data-wow-duration="2s">
+                        <img src="assets/images/features/feature1.png" alt="something was supposed to appear here">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Tab Content 2-->
+                <div class="tab-content" id="tab-feature-2">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xs-12 col-sm-6 col-sm-push-6 col-lg-7 col-lg-push-5">
+                        <h4>This is a high-quality solution for those  who don't want to code their own website</h4>
+                        <p>I mean, who would want to do that? To understand the underlying concepts? You're joking.</p>
+                        <div class="tab-icon">
+                          <div class="icon-sm">
+                            <i class="icon icon-adjustments"></i>
+                          </div>
+                          <p class="large">Numerous Colourus Schemes</p>
+                          <p>Note to self: figure out the colorus widget for the website</p>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-sm-pull-6 col-lg-5 col-lg-pull-7 hidden-xs wow fadeInLeft" data-wow-duration="2s">
+                        <img src="assets/images/features/feature2.png" class="img-device" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Tab Content 3-->
+                <div class="tab-content" id="tab-feature-3">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-5 col-sm-6">
+                        <h4>Responive landing template replete with features</h4>
+                        <p>So then, Terra got possessed by Eraquis, whose name was really Xehanort. This is the process now known as Norting.</p>
+                      </div>
+                      <div class="col-md-7 col-sm-6 hidden-xs wow fadeInRight" data-wow-duration="2s">
+                        <img src="assets/images/features/feature3.png" alt="feature3">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Tab Content 4-->
+                <div class="tab-content" id="tab-feature-4">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-7 col-sm-6">
+                        <h4>There are a lot of Ipsum Languages you can use to fill your page</h4>
+                        <p>Bacon Ipsum, Lorem Ipsum, Potter Ipsum- this may have been renamed to Rowling Ipsum due to copyright.</p>
+                        <div class="tab-icon">
+                          <div class="icon-sm">
+                            <i class="icon icon-profile-female"></i>
+                          </div>
+                          <p class="large">Maybe Female icon</p>
+                          <p>Do you think the icon makers get any benefits? Like they must get some kind of kickback for all these icons they put out.</p>
+                        </div>
+                        <div class="tab-icon">
+                          <div class="icon-sm">
+                            <i class="icon icon-compass"></i>
+                          </div>
+                          <p class="large">Pointy</p>
+                          <p>Then again, if these are produced for the public domain, perhaps the artists waived their rights to compensation.</p>
+                        </div>
+                      </div>
+                      <div class="col-md-5 col-sm-6 hidden-xs wow fadeInRight" data-wow-duration="2s">
+                        <img src="assets/images/features/feature4.png" class="img-device" alt="its an iphone">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--Features Section End-->
 

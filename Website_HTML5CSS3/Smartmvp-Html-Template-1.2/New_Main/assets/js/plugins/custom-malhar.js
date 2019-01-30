@@ -87,7 +87,6 @@ $(window).scroll(function(){
 ===============================*/
 
 (function($){
-  "use strict";
   $(".nav.navbar-nav li a").click(function(){
     var $togglebtn = $(".navbar-toggle");
     if(!($togglebtn.hasClass("collapsed"))&&($togglebtn.is(":visible"))){
